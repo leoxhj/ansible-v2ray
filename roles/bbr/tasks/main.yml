@@ -1,0 +1,11 @@
+---
+- import_tasks: centos.yml
+  when: ansible_distribution == "CentOS"
+
+- name: Add bbr.conf to /etc/sysctl.d/
+  template:
+    src: "99-bbr.conf.j2"
+    dest: "/etc/sysctl.d/99-bbr.conf"
+    mode: 0644
+- name: make sysctl apply config
+  command: sysctl -p

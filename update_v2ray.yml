@@ -1,0 +1,19 @@
+---
+- name: update v2ray
+  hosts: selfhost
+  gather_facts: true
+  become: true
+
+  vars:
+
+  vars_prompt:
+    - name: v2ray_ver
+      prompt: "V2Ray version"
+      default: "4.45.2"
+      private: no
+    - name: v2ray_arch
+      prompt: "V2Ray arch"
+      default: "64"
+      private: no
+  roles:
+    - update_v2ray

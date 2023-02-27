@@ -1,0 +1,2 @@
+[selfhost]
+bwgus ansible_port=22 ansible_host=<your ip address>

@@ -1,0 +1,9 @@
+---
+ - name: enable oracle epel ol7_developer_EPEL
+   yum_repository:
+     name: ol7_developer_EPEL
+     description: Oracle Linux $releasever EPEL Packages for Development ($basearch)
+     baseurl: https://yum$ociregion.$ocidomain/repo/OracleLinux/OL7/developer_EPEL/$basearch/
+     gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-oracle
+     gpgcheck: yes
+     enabled: true

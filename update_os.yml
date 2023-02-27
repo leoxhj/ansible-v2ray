@@ -1,0 +1,12 @@
+---
+- name: update os
+  hosts: selfhost
+  gather_facts: true
+  become: true
+
+  vars:
+
+  vars_prompt:
+
+  roles:
+    - update_os

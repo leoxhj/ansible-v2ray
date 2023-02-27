@@ -1,0 +1,25 @@
+- name: get v2ray version
+  command: v2ray -version
+  register: v2ray_version_output
+- debug: msg="{{ v2ray_version_output }}"
+
+- name: get v2ray binary package
+  unarchive:
+    src: "https://github.com/v2fly/v2ray-core/releases/download/v{{ v2ray_ver }}/v2ray-linux-{{ v2ray_arch }}.zip"
+    dest: /opt/v2ray
+    remote_src: yes
+
+- name: symlink binary files
+  file:
+    src: "/opt/v2ray/{{ item }}"
+    dest: "/usr/bin/{{ item }}"
+    state: link
+  loop:
+    - v2ray
+    - v2ctl
+- name: restart v2ray service
+  systemd:
+    name: v2ray
+    state: restarted
+    daemon_reload: yes
+    enabled: yes

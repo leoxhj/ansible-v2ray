@@ -1,0 +1,5 @@
+---
+
+- name: Set nginx user
+  set_fact:
+    nginx_user: www-data
