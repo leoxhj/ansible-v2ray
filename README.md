@@ -20,6 +20,7 @@ GNU/Linux 10 上测试通过。Debian GNU/Linux 更低版本或 Ubuntu
 * 推荐使用centos7，测试ok，机器安装完后， 注意关闭firewalld服务，不然会有问题
 * Ansible，可参考[官方文档](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-the-control-node)安装。
 * 修改roles/v2ray/templates/config.json.j2中的域名为你已经绑定DNS的域名
+* Copy id_ras.pub to your VPS as authorized_keys file (permission 600), test ssh from your source host
 
 ### 使用方法
 
