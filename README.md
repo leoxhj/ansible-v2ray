@@ -41,7 +41,7 @@ GNU/Linux 10 上测试通过。Debian GNU/Linux 更低版本或 Ubuntu
 ### Issues: v2ray client connection error "v2ray handshake timeout"
 Nginx Error Log:
 
-```bash
+```
 2023/02/27 11:49:31 [crit] 4137#4137: *1812 connect() to 127.0.0.1:1080 failed (13: Permission denied) while connecting to upstream, client: 116.230.163.217, server: jump.sunlandgreen.com, request: "GET /ws2/ HTTP/1.1", upstream: "http://127.0.0.1:1080/ws2/", host: "jump.sunlandgreen.com"
 ```
 
