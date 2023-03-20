@@ -15,12 +15,14 @@ GNU/Linux 10 上测试通过。Debian GNU/Linux 更低版本或 Ubuntu
 
 为了正常使用 V2Ray，应当满足以下要求：
 
-* 一台云主机，如 [Vultr](https://www.vultr.com/?ref=7123175)、[Linode](https://www.linode.com/?r=28bf53dae49d2c55dd671136769c0b7526db5891)、[DO](https://m.do.co/c/7758457f61ad) 等等。
+* 一台云主机，如 [Vultr](https://www.vultr.com/?ref=7599369)等等。
 * 一个域名且已经绑定到云主机。
-* 推荐使用centos7，测试ok，机器安装完后， 注意关闭firewalld服务，不然会有问题
+* 推荐使用centos7，测试ok，机器安装完后
+  - 注意关闭firewalld服务，不然会有问题 `systemctl disable firewalld && systemctl stop firewalld`
+  - `setsebool -P httpd_can_network_connect 1`
 * Ansible，可参考[官方文档](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-the-control-node)安装。
 * 修改roles/v2ray/templates/config.json.j2中的域名为你已经绑定DNS的域名
-* Copy id_ras.pub to your VPS as authorized_keys file (permission 600), test ssh from your source host
+* 设置本机到VPS的免密登录，把本地ssh的is_ras.pub上传到VPS的authorized_keys file (permission 600)，并测试本地ssh能免密登录
 
 ### 使用方法
 
