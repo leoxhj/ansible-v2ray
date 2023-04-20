@@ -25,7 +25,7 @@ Deploy New instance: ($3.50/month)
 * Server Size: 10GB SSD 
 Turn off auto backups, otherwise the price is $4.2/month
 ```
-* 一个域名且已经绑定到云主机。
+* 一个域名(比如Google domains)且已经绑定到已经部署好的云主机的IP地址。
 * 推荐使用centos7，测试ok，机器安装完后
   - 注意关闭firewalld服务，不然会有问题 `systemctl disable firewalld && systemctl stop firewalld`
   - `setsebool -P httpd_can_network_connect 1`
