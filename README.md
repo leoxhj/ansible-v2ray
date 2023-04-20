@@ -16,6 +16,15 @@ GNU/Linux 10 上测试通过。Debian GNU/Linux 更低版本或 Ubuntu
 为了正常使用 V2Ray，应当满足以下要求：
 
 * 一台云主机，如 [Vultr](https://www.vultr.com/?ref=7599369)等等，我自己用的是3.5美金一个月的VPS。
+```bash
+Deploy New instance: ($3.50/month)
+* Choose server: Cloud Compute
+* CPU & Storage Technology: Regular Performance
+* Server Location: America -> New York(NJ)
+* Server Image: CentOS 7 x64
+* Server Size: 10GB SSD 
+Turn off auto backups, otherwise the price is $4.2/month
+```
 * 一个域名且已经绑定到云主机。
 * 推荐使用centos7，测试ok，机器安装完后
   - 注意关闭firewalld服务，不然会有问题 `systemctl disable firewalld && systemctl stop firewalld`
