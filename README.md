@@ -31,7 +31,7 @@ Turn off auto backups, otherwise the price is $4.2/month
   - `setsebool -P httpd_can_network_connect 1`
 * Ansible，可参考[官方文档](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-the-control-node)安装。
 * 修改roles/v2ray/templates/config.json.j2中的域名为你已经绑定DNS的域名
-* 设置本机到VPS的免密登录，把本地ssh的is_ras.pub上传到VPS的authorized_keys file (permission 600)，并测试本地ssh能免密登录
+* 设置本机到云主机VPS的SSH远程免密登录，把本地ssh的is_ras.pub上传到VPS的authorized_keys file (permission 600)，并测试本地ssh能免密登录成功
 
 ### 使用方法
 
